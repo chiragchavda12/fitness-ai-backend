@@ -45,9 +45,18 @@ password:hashedPassword
 
 await user.save();
 
+
+// response
+
 res.json({
 
-message:"User registered successfully"
+message:"User registered successfully",
+
+user:{
+id:user._id,
+name:user.name,
+email:user.email
+}
 
 });
 
