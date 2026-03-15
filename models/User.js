@@ -18,6 +18,28 @@ type:String,
 required:true
 },
 
+/* ================= PROFILE DATA ================= */
+
+age:{
+type:Number,
+default:0
+},
+
+height:{
+type:Number,
+default:0
+},
+
+weight:{
+type:Number,
+default:0
+},
+
+goal:{
+type:String,
+default:""
+},
+
 createdAt:{
 type:Date,
 default:Date.now
