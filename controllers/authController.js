@@ -256,7 +256,12 @@ goal
 
 )
 
-res.json(user)
+res.json({
+
+message:"Profile updated successfully",
+user:user
+
+})
 
 }
 
