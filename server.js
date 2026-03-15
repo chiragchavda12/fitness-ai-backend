@@ -32,11 +32,13 @@ console.log(err);
 
 // ================= ROUTES =================
 
-app.use("/api/auth",authRoutes);
+app.get("/", (req, res) => {
+  res.send("AI Fitness Backend Running 🚀");
+});
 
-app.use("/api",contactRoutes);
-
-app.use("/api/workout",workoutRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api", contactRoutes);
+app.use("/api", workoutRoutes);
 
 
 // ================= SERVER =================
