@@ -31,7 +31,7 @@ res.send("AI Fitness Backend Running 🚀");
 
 app.use("/api/auth",authRoutes);
 app.use("/api",contactRoutes);
-app.use("/api",workoutRoutes);
+app.use("/api/workout", workoutRoutes);
 
 
 // ================= SERVER =================
