@@ -1,0 +1,83 @@
+<div class="login-page">
+
+<div class="login-container">
+
+
+<!-- LOGIN HEADER -->
+
+<div class="login-header">
+
+<h1>Login</h1>
+
+<p>Access your Fitness AI account</p>
+
+</div>
+
+
+<!-- LOGIN FORM -->
+
+<form (ngSubmit)="login()" class="login-form">
+
+
+<div class="input-box">
+
+<label>Email</label>
+
+<input
+type="email"
+placeholder="Enter your email"
+[(ngModel)]="email"
+name="email"
+required
+/>
+
+</div>
+
+
+<div class="input-box">
+
+<label>Password</label>
+
+<input
+type="password"
+placeholder="Enter your password"
+[(ngModel)]="password"
+name="password"
+required
+/>
+
+</div>
+
+
+<button type="submit" class="login-btn">
+
+Login
+
+</button>
+
+
+</form>
+
+
+<!-- LOGIN FOOTER -->
+
+<div class="login-footer">
+
+<p>
+
+Don't have an account?
+
+<a routerLink="/register">
+
+Register
+
+</a>
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>

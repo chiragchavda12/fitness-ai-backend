@@ -1,0 +1,94 @@
+<div class="workout-page">
+
+  <div class="overlay"></div>
+
+  <div class="workout-container">
+
+    <h1>Workout Exercise Library</h1>
+
+    <p>
+      Explore 50+ exercises with video demonstrations to improve your strength,
+      fitness and endurance.
+    </p>
+
+    <!-- ================= SEARCH + FILTER ================= -->
+
+    <div class="filter-section">
+
+      <input
+        type="text"
+        placeholder="Search exercise..."
+        [(ngModel)]="searchText"
+      >
+
+      <select [(ngModel)]="selectedMuscle">
+
+        <option value="">All Muscles</option>
+        <option value="Chest">Chest</option>
+        <option value="Legs">Legs</option>
+        <option value="Core">Core</option>
+        <option value="Biceps">Biceps</option>
+        <option value="Triceps">Triceps</option>
+        <option value="Back">Back</option>
+        <option value="Shoulders">Shoulders</option>
+        <option value="Glutes">Glutes</option>
+        <option value="Cardio">Cardio</option>
+
+      </select>
+
+    </div>
+
+    <!-- ================= EXERCISE GRID ================= -->
+
+    <div class="exercise-grid">
+
+      <div
+        class="exercise-card"
+        *ngFor="let e of exercises"
+      >
+
+        <h2>{{e.name}}</h2>
+
+        <iframe
+          [src]="getSafeUrl(e.video)"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+
+        <p class="description">
+          {{e.description}}
+        </p>
+
+        <h3>Target Muscles</h3>
+
+        <ul>
+          <li *ngFor="let m of e.muscles">
+            {{m}}
+          </li>
+        </ul>
+
+        <h3>Workout Recommendation</h3>
+
+        <ul>
+          <li>Sets: {{e.sets}}</li>
+          <li>Reps: {{e.reps}}</li>
+          <li>Rest: {{e.rest}}</li>
+        </ul>
+
+        <!-- SAVE WORKOUT BUTTON -->
+
+     <button
+class="complete-btn"
+(click)="completeWorkout(e)"
+type="button"
+>
+Complete Workout
+</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

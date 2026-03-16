@@ -1,0 +1,100 @@
+<div class="contact-page">
+
+<div class="contact-container">
+
+<h1 class="title">Contact Us</h1>
+
+<p class="subtitle">
+Have questions about Fitness AI? Send us a message and we'll respond soon.
+</p>
+
+
+<div class="contact-grid">
+
+
+<!-- CONTACT FORM -->
+
+<div class="contact-form">
+
+<h2>Send Message</h2>
+
+<input
+type="text"
+placeholder="Your Name"
+[(ngModel)]="name"
+required
+>
+
+
+<input
+type="email"
+placeholder="Your Email"
+[(ngModel)]="email"
+required
+>
+
+
+<input
+type="text"
+placeholder="Subject"
+[(ngModel)]="subject"
+>
+
+
+<textarea
+rows="5"
+placeholder="Your Message"
+[(ngModel)]="message"
+required
+></textarea>
+
+
+<button
+class="send-btn"
+(click)="sendMessage()"
+[disabled]="loading">
+
+{{loading ? 'Sending...' : 'Send Message'}}
+
+</button>
+
+</div>
+
+
+
+<!-- CONTACT INFO -->
+
+<div class="contact-info">
+
+<h2>Get In Touch</h2>
+
+<div class="info-box">
+<span>📧</span>
+<p>chiragchavda1737@gmail.com</p>
+</div>
+
+
+<div class="info-box">
+<span>📞</span>
+<p>+91 9725868399</p>
+</div>
+
+
+<div class="info-box">
+<span>📍</span>
+<p>Gujarat, India</p>
+</div>
+
+
+<p class="response">
+We usually respond within 24 hours.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>                      

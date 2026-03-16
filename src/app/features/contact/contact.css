@@ -1,0 +1,321 @@
+/* PAGE BACKGROUND */
+
+.contact-page{
+
+min-height:100vh;
+background:linear-gradient(135deg,#020617,#0f172a);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:40px;
+
+font-family:Arial, Helvetica, sans-serif;
+color:white;
+
+}
+
+
+/* CONTAINER */
+
+.contact-container{
+
+width:100%;
+max-width:1000px;
+
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+
+padding:40px;
+
+border-radius:12px;
+
+border:1px solid rgba(255,255,255,0.1);
+
+}
+
+
+/* TITLE */
+
+.title{
+
+text-align:center;
+
+font-size:38px;
+
+margin-bottom:10px;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+color:#94a3b8;
+
+margin-bottom:35px;
+
+}
+
+
+/* GRID */
+
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:30px;
+
+}
+
+
+/* FORM */
+
+.contact-form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.contact-form h2{
+
+margin-bottom:10px;
+
+}
+
+
+/* INPUT */
+
+.contact-form input,
+.contact-form textarea{
+
+padding:12px;
+
+border:none;
+
+border-radius:6px;
+
+background:#1e293b;
+
+color:white;
+
+outline:none;
+
+font-size:14px;
+
+}
+
+.contact-form textarea{
+
+resize:none;
+
+}
+
+
+/* BUTTON */
+
+.send-btn{
+
+padding:12px;
+
+background:#22c55e;
+
+border:none;
+
+border-radius:6px;
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.send-btn:hover{
+
+background:#16a34a;
+
+transform:scale(1.05);
+
+}
+
+.send-btn:disabled{
+
+background:gray;
+cursor:not-allowed;
+
+}
+
+
+/* CONTACT INFO */
+
+.contact-info{
+
+background:rgba(255,255,255,0.03);
+
+padding:25px;
+
+border-radius:8px;
+
+}
+
+.contact-info h2{
+
+margin-bottom:15px;
+
+}
+
+
+/* INFO BOX */
+
+.info-box{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+margin-bottom:12px;
+
+font-size:15px;
+
+}
+
+.info-box span{
+
+font-size:20px;
+
+}
+
+
+/* RESPONSE TEXT */
+
+.response{
+
+margin-top:20px;
+
+color:#94a3b8;
+
+font-size:14px;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.contact-container{
+
+padding:25px;
+
+}
+
+.title{
+
+font-size:28px;
+
+}
+
+}/* ================= MOBILE IMPROVEMENTS ================= */
+
+@media (max-width:768px){
+
+.contact-page{
+padding:20px;
+align-items:flex-start;
+}
+
+/* CONTAINER */
+
+.contact-container{
+padding:25px 20px;
+}
+
+/* TITLE */
+
+.title{
+font-size:28px;
+}
+
+.subtitle{
+font-size:14px;
+margin-bottom:25px;
+}
+
+/* GRID */
+
+.contact-grid{
+grid-template-columns:1fr;
+gap:25px;
+}
+
+/* FORM */
+
+.contact-form input,
+.contact-form textarea{
+padding:12px;
+font-size:14px;
+}
+
+/* BUTTON */
+
+.send-btn{
+width:100%;
+padding:14px;
+font-size:15px;
+}
+
+/* CONTACT INFO */
+
+.contact-info{
+padding:20px;
+}
+
+/* INFO BOX */
+
+.info-box{
+font-size:14px;
+}
+
+}
+
+
+/* EXTRA SMALL PHONES */
+
+@media (max-width:420px){
+
+.contact-container{
+padding:20px 15px;
+}
+
+.title{
+font-size:24px;
+}
+
+.contact-info{
+padding:18px;
+}
+
+.info-box span{
+font-size:18px;
+}
+
+}

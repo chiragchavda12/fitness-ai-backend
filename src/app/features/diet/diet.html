@@ -1,0 +1,257 @@
+<div class="diet-dashboard">
+
+<div class="container">
+
+<h1>Smart Nutrition Dashboard</h1>
+
+<p class="subtitle">
+Track your calories, macros and generate a personalized meal plan.
+</p>
+
+
+<!-- ================= USER INPUT ================= -->
+
+<div class="user-panel">
+
+<h2>Your Fitness Data</h2>
+
+<div class="input-grid">
+
+<div class="input-box">
+<label>Height</label>
+<input type="number" [(ngModel)]="height" placeholder="cm">
+</div>
+
+<div class="input-box">
+<label>Weight</label>
+<input type="number" [(ngModel)]="weight" placeholder="kg">
+</div>
+
+<div class="input-box">
+<label>Age</label>
+<input type="number" [(ngModel)]="age">
+</div>
+
+<div class="input-box">
+
+<label>Goal</label>
+
+<select [(ngModel)]="goal">
+
+<option value="">Select Goal</option>
+<option value="weight_loss">Weight Loss</option>
+<option value="muscle_gain">Muscle Gain</option>
+<option value="maintain">Maintain</option>
+
+</select>
+
+</div>
+
+</div>
+
+<button class="generate-btn" (click)="generateDiet()">
+Generate Smart Meal Plan
+</button>
+
+</div>
+
+
+<!-- ================= CALORIE SUMMARY ================= -->
+
+<div class="nutrition-summary" *ngIf="dietPlan.length>0">
+
+<h2>Daily Nutrition Overview</h2>
+
+<div class="macro-grid">
+
+<div class="macro-card protein">
+
+<h3>Protein</h3>
+
+<p>120g</p>
+
+</div>
+
+<div class="macro-card carbs">
+
+<h3>Carbs</h3>
+
+<p>220g</p>
+
+</div>
+
+<div class="macro-card fats">
+
+<h3>Fats</h3>
+
+<p>60g</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= MEAL TIMELINE ================= -->
+
+<div class="meal-timeline" *ngIf="dietPlan.length>0">
+
+<h2>Your Daily Meals</h2>
+
+
+<div class="meal-row">
+
+<div class="meal-time">Breakfast</div>
+
+<div class="meal-food">
+
+<ul>
+
+<li *ngFor="let b of breakfast">
+
+{{b}}
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="meal-row">
+
+<div class="meal-time">Mid Meal</div>
+
+<div class="meal-food">
+
+<ul>
+
+<li *ngFor="let m of midmeal">
+
+{{m}}
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="meal-row">
+
+<div class="meal-time">Lunch</div>
+
+<div class="meal-food">
+
+<ul>
+
+<li *ngFor="let l of lunch">
+
+{{l}}
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="meal-row">
+
+<div class="meal-time">Evening Snack</div>
+
+<div class="meal-food">
+
+<ul>
+
+<li *ngFor="let e of evening">
+
+{{e}}
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="meal-row">
+
+<div class="meal-time">Dinner</div>
+
+<div class="meal-food">
+
+<ul>
+
+<li *ngFor="let d of dinner">
+
+{{d}}
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- ================= HEALTH TIPS ================= -->
+
+<div class="tips-section">
+
+<h2>Nutrition Tips</h2>
+
+<div class="tips-grid">
+
+<div class="tip">
+
+<h4>🥗 Eat Balanced Meals</h4>
+
+<p>Include protein, carbs and healthy fats.</p>
+
+</div>
+
+<div class="tip">
+
+<h4>💧 Stay Hydrated</h4>
+
+<p>Drink at least 3 liters of water daily.</p>
+
+</div>
+
+<div class="tip">
+
+<h4>⏰ Meal Timing</h4>
+
+<p>Eat every 3–4 hours to maintain energy.</p>
+
+</div>
+
+<div class="tip">
+
+<h4>🏋 Protein Intake</h4>
+
+<p>Protein supports muscle recovery.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>

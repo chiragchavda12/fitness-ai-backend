@@ -1,0 +1,134 @@
+<div class="profile-page">
+
+    <div class="profile-container">
+
+        <h1>User Profile</h1>
+
+        <p class="subtitle">
+            Manage your personal fitness information
+        </p>
+
+
+        <!-- ================= USER CARD ================= -->
+
+        <div class="user-card">
+
+            <h2>{{name}}</h2>
+
+            <p>Email: {{email}}</p>
+
+        </div>
+
+
+        <!-- ================= EDIT PROFILE ================= -->
+
+        <div class="edit-card">
+
+            <h2>Edit Profile</h2>
+
+            <form (ngSubmit)="updateProfile()">
+
+                <div class="form-grid">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label>Full Name</label>
+
+                        <input type="text" [(ngModel)]="name" name="name" required>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label>Email</label>
+
+                        <input type="email" [(ngModel)]="email" name="email" required>
+
+                    </div>
+
+
+                    <!-- AGE -->
+
+                    <div class="form-group">
+
+                        <label>Age</label>
+
+                        <input type="number" [(ngModel)]="age" name="age">
+
+                    </div>
+
+
+                    <!-- HEIGHT -->
+
+                    <div class="form-group">
+
+                        <label>Height (cm)</label>
+
+                        <input type="number" [(ngModel)]="height" name="height">
+
+                    </div>
+
+
+                    <!-- WEIGHT -->
+
+                    <div class="form-group">
+
+                        <label>Weight (kg)</label>
+
+                        <input type="number" [(ngModel)]="weight" name="weight">
+
+                    </div>
+
+
+                    <!-- GOAL -->
+
+                    <div class="form-group">
+
+                        <label>Fitness Goal</label>
+
+                        <select [(ngModel)]="goal" name="goal">
+
+                            <option value="">Select Goal</option>
+
+                            <option value="Weight Loss">
+                                Weight Loss
+                            </option>
+
+                            <option value="Muscle Gain">
+                                Muscle Gain
+                            </option>
+
+                            <option value="Fitness">
+                                General Fitness
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- UPDATE BUTTON -->
+
+                <button type="submit" class="update-btn">
+
+                    Update Profile
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+</div>
