@@ -1,10 +1,17 @@
 const express = require("express");
 const router = express.Router();
 
-const {sendMessage} = require("../controllers/contactController");
+const { sendMessage, getMessages } = require("../controllers/contactController");
 
 
-router.post("/contact",sendMessage);
+// SEND CONTACT MESSAGE
+
+router.post("/contact", sendMessage);
+
+
+// GET ALL MESSAGES
+
+router.get("/contact", getMessages);
 
 
 module.exports = router;

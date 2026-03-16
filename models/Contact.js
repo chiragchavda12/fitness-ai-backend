@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const ContactSchema = new mongoose.Schema({
+const contactSchema = new mongoose.Schema({
 
 name:{
 type:String,
@@ -12,21 +12,16 @@ type:String,
 required:true
 },
 
-subject:{
-type:String
-},
-
 message:{
 type:String,
 required:true
 },
 
-date:{
+createdAt:{
 type:Date,
 default:Date.now
 }
 
 });
 
-
-module.exports = mongoose.model("Contact",ContactSchema);
+module.exports = mongoose.model("Contact", contactSchema);
