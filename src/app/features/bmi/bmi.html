@@ -1,0 +1,126 @@
+<div class="bmi-page">
+
+<div class="bmi-container">
+
+<h1>BMI Calculator</h1>
+
+<p class="subtitle">
+Calculate your Body Mass Index to understand your fitness level.
+</p>
+
+
+<!-- ================= INPUT SECTION ================= -->
+
+<div class="bmi-form">
+
+<h2>Enter Your Details</h2>
+
+<div class="input-grid">
+
+<div class="input-box">
+
+<label>Height (cm)</label>
+
+<input type="number" [(ngModel)]="height" placeholder="Enter height">
+
+</div>
+
+
+<div class="input-box">
+
+<label>Weight (kg)</label>
+
+<input type="number" [(ngModel)]="weight" placeholder="Enter weight">
+
+</div>
+
+</div>
+
+
+<button class="bmi-btn" (click)="calculateBMI()">
+
+Calculate BMI
+
+</button>
+
+</div>
+
+
+<!-- ================= RESULT ================= -->
+
+<div class="bmi-result" *ngIf="bmi>0">
+
+<h2>Your BMI Result</h2>
+
+<div class="result-card">
+
+<h3>{{bmi}}</h3>
+
+<p class="category">{{category}}</p>
+
+</div>
+
+</div>
+
+
+<!-- ================= BMI INFO ================= -->
+
+<div class="bmi-info">
+
+<h2>BMI Categories</h2>
+
+<div class="bmi-grid">
+
+<div class="bmi-card under">
+
+<h3>Underweight</h3>
+
+<p>BMI less than 18.5</p>
+
+</div>
+
+<div class="bmi-card normal">
+
+<h3>Normal Weight</h3>
+
+<p>BMI 18.5 – 24.9</p>
+
+</div>
+
+<div class="bmi-card over">
+
+<h3>Overweight</h3>
+
+<p>BMI 25 – 29.9</p>
+
+</div>
+
+<div class="bmi-card obese">
+
+<h3>Obese</h3>
+
+<p>BMI 30 or greater</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= FITNESS TIP ================= -->
+
+<div class="fitness-tip">
+
+<h2>Healthy Fitness Tips</h2>
+
+<p>
+Maintain a balanced diet, stay active and track your body progress regularly.
+BMI is a useful indicator but should be combined with proper nutrition and exercise.
+</p>
+
+</div>
+
+</div>
+
+</div>

@@ -1,0 +1,90 @@
+<div class="workout-page">
+
+  <div class="overlay"></div>
+
+  <div class="workout-container">
+
+    <h1>🏋 Workout Exercise Library</h1>
+
+    <p>
+      Explore exercises and track your completed workouts.
+    </p>
+
+    <!-- SEARCH + FILTER -->
+    <div class="filter-section">
+
+      <input 
+        type="text" 
+        placeholder="Search exercise..." 
+        [(ngModel)]="searchText"
+      >
+
+      <select [(ngModel)]="selectedMuscle">
+        <option value="">All Muscles</option>
+        <option value="Chest">Chest</option>
+        <option value="Legs">Legs</option>
+        <option value="Core">Core</option>
+        <option value="Biceps">Biceps</option>
+        <option value="Triceps">Triceps</option>
+        <option value="Back">Back</option>
+        <option value="Shoulders">Shoulders</option>
+        <option value="Glutes">Glutes</option>
+        <option value="Cardio">Cardio</option>
+      </select>
+
+    </div>
+
+    <!-- EXERCISES -->
+    <div class="exercise-grid">
+
+      <div class="exercise-card" *ngFor="let e of filteredExercises">
+
+        <h2>{{ e.name }}</h2>
+
+        <!-- 🔥 FAST VIDEO (Thumbnail → Click → Video) -->
+        <div class="video-box">
+
+          <img 
+            *ngIf="!e.play"
+            [src]="'https://img.youtube.com/vi/' + getVideoId(e.video) + '/hqdefault.jpg'"
+            (click)="e.play = true"
+            class="thumbnail"
+          >
+
+          <iframe 
+            *ngIf="e.play"
+            [src]="getSafeUrl(e.video)"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+        <p class="description">{{ e.description }}</p>
+
+        <h3>🎯 Target Muscles</h3>
+        <ul>
+          <li *ngFor="let m of e.muscles">{{ m }}</li>
+        </ul>
+
+        <h3>📋 Workout Plan</h3>
+        <ul>
+          <li>Sets: {{ e.sets }}</li>
+          <li>Reps: {{ e.reps }}</li>
+          <li>Rest: {{ e.rest }}</li>
+        </ul>
+
+        <!-- BUTTON -->
+        <button 
+          class="complete-btn"
+          (click)="completeWorkout(e)">
+          ✅ Complete Workout
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

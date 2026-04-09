@@ -1,0 +1,249 @@
+.about-page {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #1f2937;
+
+}
+
+
+/* HERO SECTION */
+
+.about-hero {
+
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+}
+
+.about-hero h1 {
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+}
+
+.about-hero p {
+
+    font-size: 18px;
+
+    opacity: 0.9;
+
+}
+
+
+/* ABOUT TEXT */
+
+.about-container {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+}
+
+.about-container h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+}
+
+.about-container p {
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* FEATURES */
+
+.features-section {
+
+    background: #f8fafc;
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+}
+
+.features-section h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 40px;
+
+}
+
+
+/* GRID */
+
+.features-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+}
+
+
+/* CARD */
+
+.feature-card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+
+}
+
+.feature-card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.feature-card h3 {
+
+    margin-bottom: 10px;
+
+    color: #22c55e;
+
+}
+
+
+/* MISSION */
+
+.mission-section {
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: auto;
+
+}
+
+.mission-section h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+}
+
+.mission-section p {
+
+    line-height: 1.7;
+
+    font-size: 16px;
+
+}
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width:768px){
+
+.about-hero{
+padding:60px 15px;
+}
+
+.about-hero h1{
+font-size:28px;
+}
+
+.about-hero p{
+font-size:15px;
+}
+
+
+/* ABOUT TEXT */
+
+.about-container{
+padding:40px 15px;
+}
+
+.about-container h2{
+font-size:24px;
+}
+
+.about-container p{
+font-size:15px;
+line-height:1.6;
+}
+
+
+/* FEATURES */
+
+.features-section{
+padding:40px 15px;
+}
+
+.features-section h2{
+font-size:24px;
+}
+
+
+/* GRID */
+
+.features-grid{
+grid-template-columns:1fr;
+gap:18px;
+}
+
+
+/* CARD */
+
+.feature-card{
+padding:20px;
+}
+
+.feature-card h3{
+font-size:18px;
+}
+
+
+/* MISSION */
+
+.mission-section{
+padding:40px 15px;
+}
+
+.mission-section h2{
+font-size:24px;
+}
+
+.mission-section p{
+font-size:15px;
+}
+
+}

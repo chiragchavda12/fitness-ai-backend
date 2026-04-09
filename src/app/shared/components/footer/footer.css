@@ -1,0 +1,123 @@
+.footer {
+    background: #0f172a;
+    color: white;
+    padding: 40px 20px 20px 20px;
+    margin-top: 40px;
+}
+
+/* container */
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    gap: 30px;
+}
+
+/* logo section */
+
+.footer-logo h2 {
+    color: #22c55e;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    color: #ccc;
+    max-width: 250px;
+}
+
+/* links */
+
+.footer-links h3 {
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+.footer-links a:hover {
+    color: #22c55e;
+}
+
+/* contact */
+
+.footer-contact h3 {
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+/* bottom */
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    color: #aaa;
+    font-size: 14px;
+}/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+.footer-container{
+flex-direction:column;
+align-items:center;
+text-align:center;
+gap:25px;
+}
+
+/* LOGO */
+
+.footer-logo p{
+max-width:100%;
+}
+
+/* LINKS */
+
+.footer-links ul{
+padding:0;
+}
+
+.footer-links li{
+margin-bottom:6px;
+}
+
+/* CONTACT */
+
+.footer-contact p{
+font-size:14px;
+}
+
+}
+
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width:420px){
+
+.footer{
+padding:30px 15px 15px 15px;
+}
+
+.footer-bottom{
+font-size:13px;
+}
+
+}

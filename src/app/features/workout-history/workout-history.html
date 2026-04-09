@@ -1,0 +1,52 @@
+<div class="history-page">
+
+    <div class="history-container">
+
+        <h1>📜 Workout History</h1>
+        <p>Your completed workouts are shown below.</p>
+
+        <!-- EMPTY MESSAGE -->
+        <div *ngIf="workouts.length === 0" class="empty">
+            ❌ No workout history found.
+        </div>
+
+        <!-- HISTORY GRID -->
+        <div class="history-grid">
+
+            <div class="history-card" *ngFor="let w of workouts">
+
+                <h2>{{ w.exercise }}</h2>
+
+                <!-- VIDEO (THUMBNAIL SYSTEM FOR FAST LOAD) -->
+                <div class="video-box">
+
+                    <img *ngIf="!w.play && w.video"
+                        [src]="'https://img.youtube.com/vi/' + getVideoId(w.video) + '/hqdefault.jpg'"
+                        (click)="w.play = true" class="thumbnail">
+
+                    <iframe *ngIf="w.play && w.video" [src]="getSafeUrl(w.video)" frameborder="0" allowfullscreen>
+                    </iframe>
+
+                </div>
+
+                <!-- DETAILS -->
+                <div class="details">
+
+                    <p><b>Sets:</b> {{ w.sets }}</p>
+                    <p><b>Reps:</b> {{ w.reps }}</p>
+                    <p><b>Date:</b> {{ w.date | date:'mediumDate' }}</p>
+
+                </div>
+
+                <!-- DELETE BUTTON -->
+                <button class="delete-btn" (click)="deleteWorkout(w._id)">
+                    🗑 Delete
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
